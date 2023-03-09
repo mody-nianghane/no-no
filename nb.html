@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="nb.css">
+</head>
+
+<body>
+  <div class="container">
+  <div class="row">
+    <div class="col-2">
+      <img src="logobakeli.jpg" alt="landing image">
+    </div>
+    <div class="col-2">
+      <div class="form-container">
+        <div class="form-button">
+          <span onclick="Connexionfonction()">Connexion</span>
+          <span onclick="Inscriptionfonction()">Inscription</span>
+          <hr id="indicateur">
+        </div>
+        <form id="Connexion">
+          <input type="text" placeholder="votre email">
+          <input type="password" placeholder="votre mot de passse">
+          <input type="submit" value="Connexion" class="form-btn">
+          <BR></BR>
+          <a href="">Mot de passe oublier</a>
+        </form>
+        <form id="Inscription">
+          <input type="text" placeholder="votre nom">
+          <input type="email" placeholder="votre email">
+          <input type="password" placeholder="votre mot de passe">
+          <input type="submit" value="Inscription" class="form-btn">
+        </form>
+      </div>
+
+    </div>
+  </div>
+  </div>
+  </script>
+  <!--script code pour la form toogle-->
+  <script>
+    var Connexion = document.getElementById('Connexion');
+    var Inscription = document.getElementById('Inscription');
+    var indicateur = document.getElementById('indicateur');
+
+    function Connexionfonction() {
+      Connexion.style.transform = 'translateX(300px)';
+      Inscription.style.transform = 'translateX(300px)';
+      indicateur.style.transform = 'translateX(0px)';
+    }
+
+    function Inscriptionfonction() {
+      Connexion.style.transform = 'translateX(0px)';
+      Inscription.style.transform = 'translateX(0px)';
+      indicateur.style.transform = 'translateX(130px)';
+    }
+  </script>
+</body>
+
+</html>
